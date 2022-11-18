@@ -1,0 +1,6 @@
+boto3
+fastapi[all]
+uvicorn[standard]
+python-dotenv
+autopep8
+pylint
