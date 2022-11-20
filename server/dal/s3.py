@@ -1,5 +1,4 @@
 import boto3
-from config import fetch_client_id
 
 
 class S3Config:

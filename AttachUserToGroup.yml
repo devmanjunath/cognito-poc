@@ -1,0 +1,21 @@
+Description: 'Post User Signs Up, add the user to the required userpool group'
+Parameters:
+  UserName:
+    Description: Existing username of the user pool
+    Type: String
+    ConstraintDescription: must be the name of userpool username
+  GroupName:
+    Description: Existing group of the user pool
+    Type: String
+    ConstraintDescription: must be the name of userpool group
+  UserPoolID:
+    Description: Existing user pool id
+    Type: String
+    ConstraintDescription: must be the id for the user pool id
+Resources:
+  UserGroupAttachment:
+    Type: AWS::Cognito::UserPoolUserToGroupAttachment
+    Properties: 
+      GroupName: !Ref 'GroupName'
+      Username: !Ref 'UserName'
+      UserPoolId: !Ref 'UserPoolID'

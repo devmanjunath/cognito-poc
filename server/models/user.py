@@ -12,3 +12,7 @@ class ConfirmUser(BaseModel):
 class UserSignIn(BaseModel):
     username: str
     password: str
+
+class AttachUser(BaseModel):
+    username: str
+    groupname: str
